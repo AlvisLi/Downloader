@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Window size="800,500" mininfo="800,500" maxinfo="800,500" sizebox="0,0,0,0" caption="0,0,0,36" roundcorner="0,0" showshadow="false" shadowimage="F:\Demo\Downloader\Release\skin\shadow\shadow.png" shadowcorner="23,30,23,33"> 
+	<Font name="微软雅黑" id="0" size="10" default="true" /><!--0-->
+	<Font name="微软雅黑" id="1" size="14" /><!--1-->
+    <Font name="微软雅黑" id="2" size="20" bold="true" /><!--2-->
+	<Default name="VScrollBar"  value="width=&quot;10px&quot; thumbsize=&quot;10&quot; showbutton1=&quot;false&quot; showbutton2=&quot;false&quot; thumbnormalimage=&quot;file='scrollbar2.png' source='42,4,66,28' corner='5,5,5,5' fade='200' &quot; thumbhotimage=&quot;file='scrollbar2.png' source='42,4,66,28' corner='5,5,5,5' &quot; thumbpushedimage=&quot;file='scrollbar2.png' source='42,4,66,28' corner='5,5,5,5' fade='200' &quot;" />
+	<VerticalLayout bkcolor="#FFFFFFFF" bordercolor="#FFE9E9E9" bordersize="1">
+		<!-- 标题栏 -->
+		<VerticalLayout name="ui_caption" height="36">
+			<Control height="8" />
+			<HorizontalLayout height="20">
+				<Control width="8" />
+				<Label text="下载器" textcolor="#FF333333" width="100" height="20" font="1" align="left" valign="center"/>
+				<Control />
+				<Button name="btn_minimize" width="20" height="20" normalimage="file='btn_wnd_gray_min.png' source='0,0,12,12' dest='4,4,16,16'" hotimage="btn_wnd_gray_min_hovered.png" pushedimage="btn_wnd_gray_min_pushed.png">
+				</Button>
+				<Control width="5" />
+				<Button name="btn_close" width="20" height="20" normalimage="file='btn_wnd_gray_close.png' source='0,0,12,12' dest='4,4,16,16'" hotimage="btn_wnd_white_close_hovered.png" pushedimage="btn_wnd_white_close_pushed.png">
+				</Button>
+				<Control width="8" />
+			</HorizontalLayout>
+			<Control height="8" />
+		</VerticalLayout>
+		<Control height="1" bkcolor="#FFEBEBEB" />
+		<!-- 内容区 -->
+		<HorizontalLayout bkcolor="#FFF5F6F7">
+			<VerticalLayout width="400">
+				<List name="download_list" text="" textcolor="0xffc5c5c5" vscrollbar="true" multiline="true" align="left" height="400" readonly="true" bordercolor="0xffc5c5c5" itemalign="left" itemtextcolor="#FFC5C5C5" itemhotbkcolor="#FF00BFFF" itemselectedbkcolor="#FF3599FF" itemendellipsis="true">
+					<ListHeader height="1">
+						<ListHeaderItem  text="" height="1" font="10" textcolor="#FF222222" align="left" />
+						<ListHeaderItem  text="" width="100" height="1" textcolor="0xffc5c5c5" />
+					</ListHeader>
+				</List>
+				<HorizontalLayout height="25">
+					<Control />
+					<Button text="添加下载任务" width="80" height="30" normalimage="file='btn_normal.png' source='0,0,12,12' dest='10,10,90,40'" hotimage="btn_hovered.png" pushedimage="btn_pushed.png" />
+					<Label text="网易小白" textcolor="#FF999999" font="2" align="center"/>
+					<Control />
+				</HorizontalLayout>
+			</VerticalLayout>
+			<Control width="1" bkcolor="#FFE0E0E0" />
+			<VerticalLayout width="400">
+			</VerticalLayout>
+			<Control />
+		</HorizontalLayout>
+	</VerticalLayout>
+</Window>

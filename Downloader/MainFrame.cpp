@@ -83,7 +83,7 @@ LRESULT MainFrame::HandleMessage(UINT message, WPARAM wParam, LPARAM lParam)
 		auto result = __super::HandleMessage(message, wParam, lParam);
 		
 
-		if (wParam & SC_RESTORE)
+		/*if (wParam & SC_RESTORE)
 		{
 			if (IsMaximized(GetHWND()))
 			{
@@ -106,7 +106,7 @@ LRESULT MainFrame::HandleMessage(UINT message, WPARAM wParam, LPARAM lParam)
 						_pRestoreUI->SetVisible(false);
 				}
 			}
-		}
+		}*/
 
 		
 
