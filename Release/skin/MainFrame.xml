@@ -28,7 +28,7 @@
 			<Control width="5" />
 			<VerticalLayout width="390">
 				<Control height="5" />
-				<List name="download_list" text="" textcolor="0xffc5c5c5" bordersize="1" bordercolor="0xffc5c5c5" vscrollbar="true" multiline="true" align="left" width="390" height="400" readonly="true" itemalign="left" itemtextcolor="#FFC5C5C5" itemhotbkcolor="#FF00BFFF" itemselectedbkcolor="#FF3599FF" itemendellipsis="true">
+				<List name="download_item_list" text="" textcolor="0xffc5c5c5" bordersize="1" bordercolor="0xffc5c5c5" vscrollbar="true" multiline="true" align="left" width="390" height="400" readonly="true" itemalign="left" itemtextcolor="#FFC5C5C5" itemhotbkcolor="#FF00BFFF" itemselectedbkcolor="#FF3599FF" itemendellipsis="true">
 					<ListHeader height="1">
 						<ListHeaderItem  text="" height="1" font="10" textcolor="#FF222222" align="left" />
 						<ListHeaderItem  text="" width="100" height="1" textcolor="0xffc5c5c5" />
@@ -37,9 +37,9 @@
 				<Control height="10" />
 				<HorizontalLayout height="50">
 					<Control />
-					<Button text="新建任务" visible="false" width="80" height="30" font="3" textcolor="#FF333333" normalimage="file='btn_normal.png' source='0,0,80,30' dest='0,0,80,30'" hotimage="btn_hovered.png" pushedimage="btn_pushed.png" />
+					<Button text="新建批量任务" width="100" height="30" borderround="3,3" font="3" textcolor="#FF333333" normalimage="file='btn_normal.png' source='0,0,100,30' dest='0,0,100,30'" hotimage="btn_hovered.png" pushedimage="btn_pushed.png" />
 					<Control width="25" />
-					<Button text="新建任务" width="80" height="30" font="3" textcolor="#FF333333" normalimage="file='btn_normal.png' source='0,0,80,30' dest='0,0,80,30'" hotimage="btn_hovered.png" pushedimage="btn_pushed.png" />
+					<Button text="新建任务" width="80" height="30" borderround="3,3" font="3" textcolor="#FF333333" normalimage="file='btn_normal.png' source='0,0,80,30' dest='0,0,80,30'" hotimage="btn_hovered.png" pushedimage="btn_pushed.png" />
 					<Control width="1" />
 				</HorizontalLayout>
 			</VerticalLayout>

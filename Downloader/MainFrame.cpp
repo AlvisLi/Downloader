@@ -1,6 +1,7 @@
 #include "stdafx.h"
 #include "MainFrame.h"
 //#include "common/strconv.h"
+#include "DownloadItemUI.h"
 
 //////////////////////////////////////////////////////////////////////////
 MainFrame::MainFrame()
@@ -80,35 +81,7 @@ LRESULT MainFrame::HandleMessage(UINT message, WPARAM wParam, LPARAM lParam)
 	{
 	case WM_SYSCOMMAND:
 	{
-		auto result = __super::HandleMessage(message, wParam, lParam);
-		
-
-		/*if (wParam & SC_RESTORE)
-		{
-			if (IsMaximized(GetHWND()))
-			{
-				if (_pMaxUI->IsVisible())
-				{
-					if (_pMaxUI)
-						_pMaxUI->SetVisible(false);
-					if (_pRestoreUI)
-						_pRestoreUI->SetVisible(true);
-				}
-
-			}
-			else
-			{
-				if (_pRestoreUI->IsVisible())
-				{
-					if (_pMaxUI)
-						_pMaxUI->SetVisible(true);
-					if (_pRestoreUI)
-						_pRestoreUI->SetVisible(false);
-				}
-			}
-		}*/
-
-		
+		auto result = __super::HandleMessage(message, wParam, lParam);		
 
 		return result;
 	}
@@ -117,7 +90,6 @@ LRESULT MainFrame::HandleMessage(UINT message, WPARAM wParam, LPARAM lParam)
 	default:
 		break;
 	}
-	
 	
 	return __super::HandleMessage(message, wParam, lParam);
 }
@@ -158,6 +130,10 @@ void MainFrame::InitWindow()
 	_pMaxUI = static_cast<CButtonUI*>(m_PaintManager.FindControl(_T("btn_maximize")));
 	_pRestoreUI = static_cast<CButtonUI*>(m_PaintManager.FindControl(_T("btn_restore")));
 	_pGifUI = static_cast<CGifAnimUI*>(m_PaintManager.FindControl(_T("ui_gif")));
+
+	m_listDownloadItem = static_cast<CListUI*>(m_PaintManager.FindControl(_T("download_item_list")));
+
+	RefreshDownloadItemList();
 }
 
 void MainFrame::OnFinalMessage(HWND hWnd)
@@ -167,5 +143,42 @@ void MainFrame::OnFinalMessage(HWND hWnd)
 
 CControlUI* MainFrame::CreateControl(LPCTSTR pstrClass)
 {
+	/*if (_tcscmp(pstrClass, _T("DownloadItemUI")) == 0)
+	{
+		m_uiDownloadItem = new DownloadItemUI(&m_PaintManager);
+		return m_uiDownloadItem;
+	}*/
+
 	return nullptr;
+}
+
+void MainFrame::RefreshDownloadItemList()
+{
+	//std::map<int, std::string> mapOderItems;
+	//auto beginTemp = ITDOWNLOADUSERDATA().m_mapDownloadAppsMap.begin();
+	//auto endTemp = ITDOWNLOADUSERDATA().m_mapDownloadAppsMap.end();
+	//for (; beginTemp != endTemp; ++beginTemp)
+	//{
+	//	ITDownloadAppPtr item = (*beginTemp).second;
+	//	mapOderItems.insert(std::make_pair(item->appDownloadTimeOrder, item->appName));
+	//}
+
+	//m_vectorAppsArray.clear();
+	// 列表
+	if (m_listDownloadItem != nullptr)
+	{
+		m_listDownloadItem->SetAutoDestroy(false);
+		m_listDownloadItem->RemoveAll();
+		m_listDownloadItem->SetAutoDestroy(true);
+
+		// 列表具体内容
+		for (int i = 0; i < 10; ++i)
+		{
+			DownloadItemUI* item = new DownloadItemUI(&m_PaintManager);
+			m_listDownloadItem->Add(item);
+		}
+
+		SIZE scrollPos{ 0,0 };
+		m_listDownloadItem->SetScrollPos(scrollPos);
+	}
 }

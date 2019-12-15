@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+    <VerticalLayout width="390" height="71">
+		<Control height="11" />
+		<HorizontalLayout height="48">
+			<Control width="60" />
+			<!-- app logo -->
+			<Label name="app_single_logo" bkimage="manager_app_single\\logo_default.png" width="48" height="48"/>
+			<Control width="10" />
+			<!-- app name -->
+			<VerticalLayout width="250" height="48">
+				<Control />
+				<Label name="app_single_name" textcolor="#FF545454" font="0" align="left" endellipsis="true" width="250"/>
+				<Control />
+			</VerticalLayout>
+			<Control width="8" />
+			<!-- app size -->
+			<VerticalLayout width="170" height="48">
+				<Control />
+				<Label name="app_single_size" text="0KB" textcolor="#FF999999" font="2" align="left" endellip="true" width="170"/>
+				<Control />
+			</VerticalLayout>
+			<Control width="63" />
+			<!-- app download progress -->
+			<VerticalLayout name="app_single_download_inprogress" visible="true" width="210" height="48">
+				<Control />
+				<HorizontalLayout height="15">
+					<Label name="app_signle_download_speed" textcolor="#FF545454" text="0B/s" font="2" align="left" width="100" height="15"/>
+					<Control />
+					<Label name="app_signle_download_progress_percent" textcolor="#FF545454" text="0%" font="2" align="right" width="100" height="15"/>
+				</HorizontalLayout>
+				<Control height="5"/>
+				<Slider name="app_single_download_slider" enabled="false" value="0" height="3" bkimage="manager_app_single\\download_progress_bg.png" foreimage="manager_app_single\\download_progress_front.png" />
+				<Control />
+			</VerticalLayout>
+			<!-- app download finished -->
+			<VerticalLayout name="app_single_download_complete" visible="false" width="210" height="48">
+				<Control />
+				<HorizontalLayout height="11">
+					<Control />
+					<Label bkimage="manager_app_single\\label_finish.png" width="8" height="11" />
+					<Control width="3"/>
+					<Label text="下载完成" font="2" textcolor="#FF999999" height="11" />
+					<Control />
+				</HorizontalLayout>
+				<Control />
+			</VerticalLayout>
+			<Control width="107" />
+			<!-- app single delete -->
+			<VerticalLayout width="20" height="48">
+				<Control />
+				<Button name="btn_app_delete" tooltip="删除并清理文件" width="12" height="12" normalimage="manager_app_single\\btn_delete_nor.png" hotimage="manager_app_single\\btn_delete_hov.png" pushedimage="manager_app_single\\btn_delete_nor.png">
+				</Button>
+				<Control />
+			</VerticalLayout>
+			<Control width="69" />
+			<!-- app single open folder -->
+			<VerticalLayout width="20" height="48">
+				<Control />
+				<Button name="btn_app_opend_folder" tooltip="打开所在文件夹" width="14" height="12" normalimage="manager_app_single\\btn_folder_nor.png" hotimage="manager_app_single\\btn_folder_hov.png" pushedimage="manager_app_single\\btn_folder_nor.png">
+				</Button>
+				<Control />
+			</VerticalLayout>
+			<Control />
+		</HorizontalLayout>
+		<Control height="11" />
+		<Control height="1" bkcolor="#FFF4F4F4"/>
+    </VerticalLayout>
+</Window>

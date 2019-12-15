@@ -33,6 +33,8 @@ public:
 	virtual LRESULT MessageHandler(UINT uMsg, WPARAM wParam, LPARAM lParam, bool& bHandled);
 	virtual void InitWindow();
 	virtual void OnFinalMessage(HWND hWnd);
+
+	void RefreshDownloadItemList();
 	
 protected:
 	//CEditUI* _pUrlUI = nullptr;
@@ -42,5 +44,7 @@ protected:
 	CTabLayoutUI* _pTabUI = nullptr;
 	CGifAnimUI* _pGifUI = nullptr;
 	//WkeUI* _pWkeUI = nullptr;
+
+	CListUI* m_listDownloadItem = nullptr;
 };
 
