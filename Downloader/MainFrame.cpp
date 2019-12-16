@@ -6,7 +6,7 @@
 //////////////////////////////////////////////////////////////////////////
 MainFrame::MainFrame()
 {
-	CreateDuiWindow(nullptr, _T("обтьфВ"), UI_WNDSTYLE_FRAME, 0);
+	CreateDuiWindow(nullptr, _T("обтьфВ"), UI_WNDSTYLE_DIALOG, 0);
 	assert(IsWindow(GetHWND()));
 }
 

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Window size="800,500" mininfo="800,500" maxinfo="800,500" sizebox="0,0,0,0" caption="0,0,0,36" roundcorner="5,5" showshadow="false" shadowimage="F:\Demo\Downloader\Release\skin\shadow\shadow.png" shadowcorner="23,30,23,33"> 
+<Window size="800,500" mininfo="800,500" maxinfo="800,500" sizebox="0,0,0,0" caption="0,0,0,36" roundcorner="5,5" showshadow="true" shadowimage="shadow\shadow.png" shadowcorner="23,13,23,33"> 
 	<Font name="微软雅黑" id="0" size="10" default="true" /><!--0-->
 	<Font name="微软雅黑" id="1" size="14" /><!--1-->
     <Font name="微软雅黑" id="2" size="20" bold="true" /><!--2-->
@@ -34,14 +34,15 @@
 						<ListHeaderItem  text="" width="100" height="1" textcolor="0xffc5c5c5" />
 					</ListHeader>
 				</List>
-				<Control height="10" />
-				<HorizontalLayout height="50">
+				<Control />
+				<HorizontalLayout height="30">
 					<Control />
-					<Button text="新建批量任务" width="100" height="30" borderround="3,3" font="3" textcolor="#FF333333" normalimage="file='btn_normal.png' source='0,0,100,30' dest='0,0,100,30'" hotimage="btn_hovered.png" pushedimage="btn_pushed.png" />
+					<Button text="全部开始" width="80" height="30" borderround="3,3" font="3" textcolor="#FF333333" normalimage="file='btn_normal.png' source='0,0,80,30' dest='0,0,80,30'" hotimage="btn_hovered.png" pushedimage="btn_pushed.png" />
 					<Control width="25" />
 					<Button text="新建任务" width="80" height="30" borderround="3,3" font="3" textcolor="#FF333333" normalimage="file='btn_normal.png' source='0,0,80,30' dest='0,0,80,30'" hotimage="btn_hovered.png" pushedimage="btn_pushed.png" />
 					<Control width="1" />
 				</HorizontalLayout>
+				<Control />
 			</VerticalLayout>
 			<Control width="5" />
 			<Control width="1" bkcolor="#FFEBEDF0" />

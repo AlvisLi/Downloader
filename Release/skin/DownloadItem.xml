@@ -1,69 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Window>
-    <VerticalLayout width="390" height="71">
-		<Control height="11" />
-		<HorizontalLayout height="48">
-			<Control width="60" />
-			<!-- app logo -->
-			<Label name="app_single_logo" bkimage="manager_app_single\\logo_default.png" width="48" height="48"/>
-			<Control width="10" />
-			<!-- app name -->
-			<VerticalLayout width="250" height="48">
+<Window size="380,60">
+	<Font name="微软雅黑" id="0" size="10" default="true" /><!--0-->
+	<Font name="微软雅黑" id="1" size="12" /><!--1-->
+    <Font name="微软雅黑" id="2" size="20" bold="true" /><!--2-->
+	<Font name="微软雅黑" id="3" size="15" /><!--3-->
+    <VerticalLayout width="380" height="60">
+		<HorizontalLayout height="58">
+			<Control width="15" />
+			<!-- file logo -->
+			<VerticalLayout width="32" height="58">
 				<Control />
-				<Label name="app_single_name" textcolor="#FF545454" font="0" align="left" endellipsis="true" width="250"/>
-				<Control />
-			</VerticalLayout>
-			<Control width="8" />
-			<!-- app size -->
-			<VerticalLayout width="170" height="48">
-				<Control />
-				<Label name="app_single_size" text="0KB" textcolor="#FF999999" font="2" align="left" endellip="true" width="170"/>
+				<Button name="btn_open_folder" width="32" height="32" tooltip="打开所在文件夹" bkimage="file='file_downloading.png' source='0,0,128,128' dest='0,0,32,32'" />
 				<Control />
 			</VerticalLayout>
-			<Control width="63" />
-			<!-- app download progress -->
-			<VerticalLayout name="app_single_download_inprogress" visible="true" width="210" height="48">
-				<Control />
-				<HorizontalLayout height="15">
-					<Label name="app_signle_download_speed" textcolor="#FF545454" text="0B/s" font="2" align="left" width="100" height="15"/>
-					<Control />
-					<Label name="app_signle_download_progress_percent" textcolor="#FF545454" text="0%" font="2" align="right" width="100" height="15"/>
+			<Control width="15" />
+			<!-- file info -->
+			<VerticalLayout width="260" height="58" >
+				<!-- file name -->
+				<Control height="5" />
+				<HorizontalLayout width="260" height="18" >
+					<Label name="app_si_name" text="en_visio_professional_2016_x86_x64_dvd_6962139.iso" tooltip="en_visio_professional_2016_x86_x64_dvd_6962139.iso" textcolor="#FF545454" font="1" align="left" endellipsis="true" width="260" height="18"/>
 				</HorizontalLayout>
-				<Control height="5"/>
-				<Slider name="app_single_download_slider" enabled="false" value="0" height="3" bkimage="manager_app_single\\download_progress_bg.png" foreimage="manager_app_single\\download_progress_front.png" />
 				<Control />
-			</VerticalLayout>
-			<!-- app download finished -->
-			<VerticalLayout name="app_single_download_complete" visible="false" width="210" height="48">
-				<Control />
-				<HorizontalLayout height="11">
+				<!-- file download progress -->
+				<HorizontalLayout width="260" height="3" visiable="false">
 					<Control />
-					<Label bkimage="manager_app_single\\label_finish.png" width="8" height="11" />
-					<Control width="3"/>
-					<Label text="下载完成" font="2" textcolor="#FF999999" height="11" />
+					<Slider name="download_item_slider" enabled="false" value="70" width="260" height="3" bkimage="download_progress_bg.png" foreimage="download_progress_front.png" />
 					<Control />
 				</HorizontalLayout>
 				<Control />
-			</VerticalLayout>
-			<Control width="107" />
-			<!-- app single delete -->
-			<VerticalLayout width="20" height="48">
-				<Control />
-				<Button name="btn_app_delete" tooltip="删除并清理文件" width="12" height="12" normalimage="manager_app_single\\btn_delete_nor.png" hotimage="manager_app_single\\btn_delete_hov.png" pushedimage="manager_app_single\\btn_delete_nor.png">
-				</Button>
-				<Control />
-			</VerticalLayout>
-			<Control width="69" />
-			<!-- app single open folder -->
-			<VerticalLayout width="20" height="48">
-				<Control />
-				<Button name="btn_app_opend_folder" tooltip="打开所在文件夹" width="14" height="12" normalimage="manager_app_single\\btn_folder_nor.png" hotimage="manager_app_single\\btn_folder_hov.png" pushedimage="manager_app_single\\btn_folder_nor.png">
-				</Button>
-				<Control />
+				<!-- file download speed, downloaded size, completed progress, etc -->
+				<HorizontalLayout width="260" height="15" >
+					<Label name="download_item_size" textcolor="#FF545454" text="30.25KB/50.25GB" font="0" align="left" width="100" height="18"/>
+					<Label name="download_item_progress" textcolor="#FF545454" text="50.56%" font="0" align="center" width="50" height="18"/>
+					<Label name="download_item_speed" textcolor="#FF545454" text="70KB/s" font="0" align="right" width="100" height="18"/>
+					<Control />
+				</HorizontalLayout>
+				<Control height="3"/>
 			</VerticalLayout>
 			<Control />
+			<VerticalLayout width="25" height="58" >
+				<Control />
+				<Button name="btn_download_start" width="25" height="16" tooltip="开始下载" normalimage="file='download_start.png' source='0,0,50,31' dest='0,0,25,16'" >
+				</Button>
+				<Control height="10" />
+				<HorizontalLayout height="16">
+					<Control />
+					<Button name="btn_open_folder" width="16" height="16" tooltip="删除并清理原文件" normalimage="file='delete_file.png' source='0,0,32,32' dest='0,0,16,16'" >
+					</Button>
+					<Control />
+				</HorizontalLayout>
+				<Control />
+			</VerticalLayout>
+			<Control width="15" />
 		</HorizontalLayout>
-		<Control height="11" />
+		<Control height="1" />
 		<Control height="1" bkcolor="#FFF4F4F4"/>
     </VerticalLayout>
 </Window>

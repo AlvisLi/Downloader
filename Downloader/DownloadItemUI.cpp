@@ -20,8 +20,8 @@ DownloadItemUI::DownloadItemUI(DirectUI::CPaintManagerUI* pPaintManager)
 	}
 
 	Add(pRootUI);
-	SetFixedWidth(974);
-	SetFixedHeight(71);
+	SetFixedWidth(380);
+	SetFixedHeight(60);
 
 	m_pLabelAppLogoUI = static_cast<CLabelUI*>(FindSubControl(_T("app_single_logo")));
 	m_pLabelAppNameUI = static_cast<CLabelUI*>(FindSubControl(_T("app_single_name")));
