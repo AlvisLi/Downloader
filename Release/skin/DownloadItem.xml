@@ -17,18 +17,16 @@
 			<!-- file info -->
 			<VerticalLayout width="260" height="58" >
 				<!-- file name -->
-				<Control height="5" />
+				<Control  />
 				<HorizontalLayout width="260" height="18" >
 					<Label name="app_si_name" text="en_visio_professional_2016_x86_x64_dvd_6962139.iso" tooltip="en_visio_professional_2016_x86_x64_dvd_6962139.iso" textcolor="#FF545454" font="1" align="left" endellipsis="true" width="260" height="18"/>
 				</HorizontalLayout>
 				<Control />
 				<!-- file download progress -->
-				<HorizontalLayout width="260" height="3" visiable="false">
-					<Control />
+				<HorizontalLayout width="260" height="8" visiable="false">
 					<Slider name="download_item_slider" enabled="false" value="70" width="260" height="3" bkimage="download_progress_bg.png" foreimage="download_progress_front.png" />
-					<Control />
+					<Control height="5"/>
 				</HorizontalLayout>
-				<Control />
 				<!-- file download speed, downloaded size, completed progress, etc -->
 				<HorizontalLayout width="260" height="15" >
 					<Label name="download_item_size" textcolor="#FF545454" text="30.25KB/50.25GB" font="0" align="left" width="100" height="18"/>
@@ -36,7 +34,7 @@
 					<Label name="download_item_speed" textcolor="#FF545454" text="70KB/s" font="0" align="right" width="100" height="18"/>
 					<Control />
 				</HorizontalLayout>
-				<Control height="3"/>
+				<Control />
 			</VerticalLayout>
 			<Control />
 			<VerticalLayout width="25" height="58" >

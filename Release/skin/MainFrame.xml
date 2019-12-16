@@ -28,10 +28,10 @@
 			<Control width="5" />
 			<VerticalLayout width="390">
 				<Control height="5" />
-				<List name="download_item_list" text="" textcolor="0xffc5c5c5" bordersize="1" bordercolor="0xffc5c5c5" vscrollbar="true" multiline="true" align="left" width="390" height="400" readonly="true" itemalign="left" itemtextcolor="#FFC5C5C5" itemhotbkcolor="#FF00BFFF" itemselectedbkcolor="#FF3599FF" itemendellipsis="true">
+				<List name="download_item_list" bordersize="1" bordercolor="0xffc5c5c5" vscrollbar="true" width="390" height="400" >
 					<ListHeader height="1">
-						<ListHeaderItem  text="" height="1" font="10" textcolor="#FF222222" align="left" />
-						<ListHeaderItem  text="" width="100" height="1" textcolor="0xffc5c5c5" />
+						<ListHeaderItem />
+						<ListHeaderItem />
 					</ListHeader>
 				</List>
 				<Control />
