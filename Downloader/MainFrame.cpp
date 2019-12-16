@@ -172,7 +172,7 @@ void MainFrame::RefreshDownloadItemList()
 		m_listDownloadItem->SetAutoDestroy(true);
 
 		// 列表具体内容
-		for (int i = 0; i < 10; ++i)
+		for (int i = 0; i < 30; ++i)
 		{
 			DownloadItemUI* item = new DownloadItemUI(&m_PaintManager);
 			m_listDownloadItem->Add(item);

@@ -13,6 +13,27 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="头文件\common">
+      <UniqueIdentifier>{725f2a4a-1edf-4945-bb4f-87ca220ef4e3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\common">
+      <UniqueIdentifier>{7ec2bec6-20ad-4658-92a9-9c72753e056a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\http">
+      <UniqueIdentifier>{5f3de0aa-906d-4b61-969c-fd03091d4bde}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\http">
+      <UniqueIdentifier>{b1faa1b2-7d06-4add-99e0-88492ce24bc6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\jsoncpp">
+      <UniqueIdentifier>{f064ad86-9adb-4031-8580-5d23071934f3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\jsoncpp">
+      <UniqueIdentifier>{3a9277d6-3161-488a-9205-3cc2928da89d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\jsoncpp\json">
+      <UniqueIdentifier>{3537c528-f87e-4a7d-9682-a0ca05d9ed2b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -33,6 +54,21 @@
     <ClInclude Include="DownloadItemUI.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="common\strconv.h">
+      <Filter>头文件\common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\strconv2.h">
+      <Filter>头文件\common</Filter>
+    </ClInclude>
+    <ClInclude Include="http\HttpCurl.h">
+      <Filter>头文件\http</Filter>
+    </ClInclude>
+    <ClInclude Include="jsoncpp\json\json.h">
+      <Filter>头文件\jsoncpp\json</Filter>
+    </ClInclude>
+    <ClInclude Include="jsoncpp\json\json-forwards.h">
+      <Filter>头文件\jsoncpp\json</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -46,6 +82,18 @@
     </ClCompile>
     <ClCompile Include="DownloadItemUI.cpp">
       <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="common\strconv.cpp">
+      <Filter>源文件\common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\strconv2.cpp">
+      <Filter>源文件\common</Filter>
+    </ClCompile>
+    <ClCompile Include="http\HttpCurl.cpp">
+      <Filter>源文件\http</Filter>
+    </ClCompile>
+    <ClCompile Include="jsoncpp\jsoncpp.cpp">
+      <Filter>源文件\jsoncpp</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
